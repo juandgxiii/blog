@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Lista de Universidades</title>
+        <meta charset='utf-8' />
+        <link rel='icon' type='image/png' href="imgs/cap.png" />
+        <style type="text/css">
+        body {padding-top: 50px;}
+        </style>
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    </head>
+        
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img style="height:30px" src="imgs/toto.jpg"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" title="Home"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li class="active"><a href="uni" title="Uni"><span class="glyphicon glyphicon-education"></span></a></li>
+                    <li><a href="gotas" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <table class='table table-hover'>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Link</th>
+                <th>Costo</th>
+                <th>Info</th>
+                <th>GMAT</th>
+                <th>ESL</th>
+                <th>Shanghai <a href='http://www.shanghairanking.com/SubjectEcoBus2014.html' title='Andes no está'><span class='glyphicon glyphicon-link'></span></a></th>
+                <th>QS <a href='http://www.topuniversities.com/university-rankings/faculty-rankings/social-sciences-and-management/2014#sorting=rank+region=+country=+faculty=+stars=false+search=' title='Andes=173'><span class='glyphicon glyphicon-link'></span></a></th>
+                <th>FT <a href='http://rankings.ft.com/businessschoolrankings/global-mba-ranking-2014' title='Andes=47'><span class='glyphicon glyphicon-link'></span></a></th>
+                <th>IDEAS <a href='https://ideas.repec.org/top/top.econdept.html' title='Andes=210'><span class='glyphicon glyphicon-link'></span></a></th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                <td><a href="#">Aarhus Universitet</a></td>
+                <td><a href='http://www.au.dk/en'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>62</td>
+                <td>-</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td><a href="#">Amsterdam Business School, UvA</a></td>
+                <td><a href='http://abs.uva.nl/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>42</td>
+                <td>-</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <td><a href="#">Arizona State University</a></td>
+                <td><a href='http://www.asu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>22</td>
+                <td>178</td>
+                <td>87</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td><a href="#">Barcelona Graduate School of Economics</a></td>
+                <td><a href='http://www.barcelonagse.eu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td>$18,075</td>
+                <td>6 programas, todos de 9 meses<br/>awarded jointly with Pompeu Fabra and Autònoma de Barcelona</td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td><a href="#">Boston College</a></td>
+                <td><a href='http://www.bc.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>182</td>
+                <td>82</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td><a href="#">Boston University</a></td>
+                <td><a href='http://www.bu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>41</td>
+                <td>100</td>
+                <td>75</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td><a href="#">BPP University</a></td>
+                <td><a href='http://www.bpp.com'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Brown University</a></td>
+                <td><a href='http://www.brown.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>51</td>
+                <td>81</td>
+                <td>-</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td><a href="#">Budapest University of Technology and Economics</a></td>
+                <td><a href='http://www.bme.hu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Caltech</a></td>
+                <td><a href='http://www.caltech.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>145</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Cardiff University</a></td>
+                <td><a href='http://www.cardiff.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>103</td>
+                <td>-</td>
+                <td>227</td>
+            </tr>
+            <tr>
+                <td><a href="#">Carnegie Mellon University</a></td>
+                <td><a href='http://www.cmu.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>16</td>
+                <td>85</td>
+                <td>34</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td><a href="#">Central European University</a></td>
+                <td><a href='http://www.ceu.hu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>177</td>
+                <td>-</td>
+                <td>212</td>
+            </tr>
+            <tr>
+                <td><a href="#">City University London</a></td>
+                <td><a href='http://www.city.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>132</td>
+                <td>41</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Cologne University of Applied Sciences</a></td>
+                <td><a href='http://www.fh-koeln.de'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Columbia University</a></td>
+                <td><a href='http://www.columbia.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>6</td>
+                <td>12</td>
+                <td>5</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td><a href="#">Cornell University</a></td>
+                <td><a href='http://www.cornell.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>21</td>
+                <td>44</td>
+                <td>27</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td><a href="#">Dartmouth College</a></td>
+                <td><a href='http://dartmouth.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>32</td>
+                <td>134</td>
+                <td>20</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td><a href="#">Duke University</a></td>
+                <td><a href='http://duke.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>17</td>
+                <td>47</td>
+                <td>17</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td><a href="#">Durham University</a></td>
+                <td><a href='http://www.dur.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>92</td>
+                <td>97</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">EAE Business School</a></td>
+                <td><a href='http://www.eae.es'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Erasmus University</a></td>
+                <td><a href='http://www.eur.nl/english/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>28</td>
+                <td>34</td>
+                <td>39</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td><a href="#">ETH Zurich</a></td>
+                <td><a href='http://www.ethz.ch/en.html'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>60</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">European School of Management and Technology</a></td>
+                <td><a href='http://www.esmt.org'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>89</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Georgetown University</a></td>
+                <td><a href='http://www.georgetown.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>51</td>
+                <td>156</td>
+                <td>36</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td><a href="#">Harvard University</a></td>
+                <td><a href='http://www.harvard.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><a href="#">HEC Paris</a></td>
+                <td><a href='http://www.hec.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td>Dual MBA con NYU</td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>50</td>
+                <td>21</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Hult International Business School</a></td>
+                <td><a href='http://www.hult.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>61</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">IE Business School</a></td>
+                <td><a href='http://www.ie.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>13</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">IESE Business School</a></td>
+                <td><a href='http://www.iese.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>7</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Indiana University Bloomington</a></td>
+                <td><a href='http://www.iub.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>26</td>
+                <td>116</td>
+                <td>-</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td><a href="#">INSEAD</a></td>
+                <td><a href='http://www.insead.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>49</td>
+                <td>24</td>
+                <td>6</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">INSEEC</a></td>
+                <td><a href='http://www.inseec.com'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Jönköping University</a></td>
+                <td><a href='http://hj.se/en.html'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Katholieke Universiteit Leuven</a></td>
+                <td><a href='http://www.kuleuven.be/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>59</td>
+                <td>-</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td><a href="#">La Rochelle Business School</a></td>
+                <td><a href='http://www.esc-larochelle.fr'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">London Business School</a></td>
+                <td><a href='http://www.london.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>39</td>
+                <td>10</td>
+                <td>3</td>
+                <td>149</td>
+            </tr>
+            <tr>
+                <td><a href="#">London School of Economics</a></td>
+                <td><a href='http://www.lse.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>14</td>
+                <td>2</td>
+                <td>-</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td><a href="#">Ludwig Maximilian University of Munich</a></td>
+                <td><a href='http://www.en.uni-muenchen.de/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>90</td>
+                <td>-</td>
+                <td>81</td>
+            </tr>
+            <tr>
+                <td><a href="#">Lund University</a></td>
+                <td><a href='http://www.lunduniversity.lu.se'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>87</td>
+                <td>-</td>
+                <td>107</td>
+            </tr>
+            <tr>
+                <td><a href="#">Massachusetts Institute of Technology</a></td>
+                <td><a href='http://web.mit.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>3</td>
+                <td>6</td>
+                <td>8</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td><a href="#">Michigan State University</a></td>
+                <td><a href='http://www.msu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>41</td>
+                <td>123</td>
+                <td>52</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td><a href="#">Middlesex University London</a></td>
+                <td><a href='http://www.mdx.ac.uk/postgraduate'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">National University of Singapore</a></td>
+                <td><a href='http://www.nus.edu.sg/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>51</td>
+                <td>9</td>
+                <td>32</td>
+                <td>116</td>
+            </tr>
+            <tr>
+                <td><a href="#">New York University</a></td>
+                <td><a href='http://www.nyu.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td>Dual MBA con HEC Paris</td>
+                <td></td>
+                <td></td>                <td>9</td>
+                <td>17</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td><a href="#">NHH - Norwegian School of Economics</a></td>
+                <td><a href='http://www.nhh.no/en/home.aspx'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>151</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Northwestern University</a></td>
+                <td><a href='http://www.northwestern.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>11</td>
+                <td>32</td>
+                <td>15</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td><a href="#">Paris School of Economics</a></td>
+                <td><a href='http://www.parisschoolofeconomics.eu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td><a href="#">Pennsylvania State University - University Park</a></td>
+                <td><a href='http://www.psu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>30</td>
+                <td>108</td>
+                <td>62</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td><a href="#">Princeton University</a></td>
+                <td><a href='http://www.princeton.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td>$43,720</td>
+                <td>Assistanships may help pay for tuition</td>
+                <td></td>
+                <td></td>                <td>5</td>
+                <td>15</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><a href="#">Rice University</a></td>
+                <td><a href='http://www.rice.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>-</td>
+                <td>35</td>
+                <td>137</td>
+            </tr>
+            <tr>
+                <td><a href="#">Sciences Po</a></td>
+                <td><a href='http://www.sciencespo.fr'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>62</td>
+                <td>-</td>
+                <td>81</td>
+            </tr>
+            <tr>
+                <td><a href="#">Stanford University</a></td>
+                <td><a href='http://www.stanford.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>7</td>
+                <td>5</td>
+                <td>2</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td><a href="#">Stockholm School of Economics</a></td>
+                <td><a href='http://www.hhs.se'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td>$40,408</td>
+                <td>Dual Master con St Gallen</td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>70</td>
+                <td>-</td>
+                <td>114</td>
+            </tr>
+            <tr>
+                <td><a href="#">Texas A&M University</a></td>
+                <td><a href='http://www.tamu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>25</td>
+                <td>220</td>
+                <td>75</td>
+                <td>164</td>
+            </tr>
+            <tr>
+                <td><a href="#">Texas State University</a></td>
+                <td><a href='http://www.txstate.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">The Australian National University</a></td>
+                <td><a href='http://www.anu.edu.au'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>13</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">The Hong Kong University of Science and Technology</a></td>
+                <td><a href='http://www.ust.hk/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>46</td>
+                <td>26</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">The Johns Hopkins University</a></td>
+                <td><a href='http://www.jhu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>46</td>
+                <td>109</td>
+                <td>-</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td><a href="#">The Ohio State University - Columbus</a></td>
+                <td><a href='http://www.osu.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>26</td>
+                <td>96</td>
+                <td>70</td>
+                <td>52</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Buckingham</a></td>
+                <td><a href='http://www.buckingham.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Edinburgh</a></td>
+                <td><a href='http://www.de.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>151</td>
+                <td>52</td>
+                <td>-</td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Melbourne</a></td>
+                <td><a href='http://www.unimelb.edu.au/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>50</td>
+                <td>18</td>
+                <td>68</td>
+                <td>103</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Northampton</a></td>
+                <td><a href='http://www.northampton.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Sheffield</a></td>
+                <td><a href='http://www.sheffield.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>169</td>
+                <td>-</td>
+                <td>181</td>
+            </tr>
+            <tr>
+                <td><a href="#">The University of Texas at Austin</a></td>
+                <td><a href='http://www.utexas.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>31</td>
+                <td>45</td>
+                <td>39</td>
+                <td>82</td>
+            </tr>
+            <tr>
+                <td><a href="#">Tilburg University</a></td>
+                <td><a href='http://www.tilburguniversity.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>45</td>
+                <td>103</td>
+                <td>74</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td><a href="#">Toulouse School of Economics</a></td>
+                <td><a href='http://www.tse-fr.eu/index.php?lang=en'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td><a href="#">Universidad Carlos III de Madrid</a></td>
+                <td><a href='http://www.uc3m.com/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>134</td>
+                <td>-</td>
+                <td>88</td>
+            </tr>
+            <tr>
+                <td><a href="#">Universidade de Santiago de Compostela</a></td>
+                <td><a href='http://www.usc.es'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Università Commerciale Luigi Bocconi</a></td>
+                <td><a href='http://www.unibocconi.it/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>25</td>
+                <td>37</td>
+                <td>174</td>
+            </tr>
+            <tr>
+                <td><a href="#">Universitat Autònoma de Barcelona</a></td>
+                <td><a href='http://www.uab.cat'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>151</td>
+                <td>103</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University College London</a></td>
+                <td><a href='http://www.ucl.ac.uk/international'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>51</td>
+                <td>40</td>
+                <td>-</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Alberta</a></td>
+                <td><a href='http://www.ualberta.ca/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>37</td>
+                <td>158</td>
+                <td>-</td>
+                <td>233</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Bonn</a></td>
+                <td><a href='http://www3.uni-bonn.de/?set_language=en'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>190</td>
+                <td>-</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Bristol</a></td>
+                <td><a href='http://www.bristol.ac.uk/international'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>69</td>
+                <td>-</td>
+                <td>135</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of British Columbia</a></td>
+                <td><a href='http://www.ubc.ca/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>38</td>
+                <td>37</td>
+                <td>72</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of California, Berkeley</a></td>
+                <td><a href='http://berkeley.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>4</td>
+                <td>8</td>
+                <td>11</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of California - Davis</a></td>
+                <td><a href='http://ucdavis.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>76</td>
+                <td>225</td>
+                <td>98</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of California, Irvine</a></td>
+                <td><a href='http://uci.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>48</td>
+                <td>-</td>
+                <td>48</td>
+                <td>56</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of California, Los Angeles</a></td>
+                <td><a href='http://www.ucla.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>15</td>
+                <td>19</td>
+                <td>26</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of California, San Diego</a></td>
+                <td><a href='http://ucsd.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>18</td>
+                <td>96</td>
+                <td>84</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Cambridge</a></td>
+                <td><a href='http://www.cam.ac.uk/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>19</td>
+                <td>4</td>
+                <td>16</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Chicago</a></td>
+                <td><a href='http://www.uchicago.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>2</td>
+                <td>7</td>
+                <td>9</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Copenhagen</a></td>
+                <td><a href='http://www.ku.dk/english/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>57</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Essex</a></td>
+                <td><a href='http://www.essex.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>100</td>
+                <td>-</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Illinois at Urbana-Champaign</a></td>
+                <td><a href='http://illinois.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>36</td>
+                <td>82</td>
+                <td>44</td>
+                <td>99</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Leicester</a></td>
+                <td><a href='http://www.le.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>241</td>
+                <td>-</td>
+                <td>186</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Maryland, College Park</a></td>
+                <td><a href='http://www.umd.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>23</td>
+                <td>-</td>
+                <td>50</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Michigan-Ann Arbor</a></td>
+                <td><a href='http://www.umich.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>12</td>
+                <td>27</td>
+                <td>23</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Minnesota, Twin Cities</a></td>
+                <td><a href='http://www.umn.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>10</td>
+                <td>72</td>
+                <td>54</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of North Carolina at Chapel Hill</a></td>
+                <td><a href='http://unc.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>29</td>
+                <td>75</td>
+                <td>33</td>
+                <td>172</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Nottingham</a></td>
+                <td><a href='http://www.nottingham.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>74</td>
+                <td>-</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Oxford</a></td>
+                <td><a href='http://www.ox.ac.uk/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>20</td>
+                <td>3</td>
+                <td>23</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Pannonia</a></td>
+                <td><a href='http://en.gtk.uni-pannon.hu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Pennsylvania: Penn</a></td>
+                <td><a href='http://www.upenn.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>8</td>
+                <td>14</td>
+                <td>4</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Pompeu Fabra</a></td>
+                <td><a href='http://www.upf.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>51</td>
+                <td>93</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Reading</a></td>
+                <td><a href='http://www.reading.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>280</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Southampton</a></td>
+                <td><a href='http://www.southampton.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Southern California</a></td>
+                <td><a href='http://www.usc.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>35</td>
+                <td>116</td>
+                <td>65</td>
+                <td>59</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of South Wales</a></td>
+                <td><a href='http://www.southgales.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of St Andrews</a></td>
+                <td><a href='http://www.st-andrews.ac.uk/study'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>254</td>
+                <td>-</td>
+                <td>205</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of St Gallen</a></td>
+                <td><a href='http://http://www.unisg.ch/en'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td>Dual Master con Stockholm School of Economics</td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>90</td>
+                <td>88</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Stuttgart</a></td>
+                <td><a href='http://www.ia.uni-stuttgart.de'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Texas at Dallas</a></td>
+                <td><a href='http://www.utdallas.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>43</td>
+                <td>-</td>
+                <td>-</td>
+                <td>182</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Toronto</a></td>
+                <td><a href='http://www.utoronto.ca/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>24</td>
+                <td>34</td>
+                <td>51</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Warwick</a></td>
+                <td><a href='http://www.warwick.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>33</td>
+                <td>34</td>
+                <td>25</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Washington</a></td>
+                <td><a href='http://www.washington.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>33</td>
+                <td>96</td>
+                <td>58</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of Wisconsin - Madison</a></td>
+                <td><a href='http://www.wisc.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>43</td>
+                <td>54</td>
+                <td>-</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td><a href="#">University of York</a></td>
+                <td><a href='http://www.york.ac.uk'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>161</td>
+                <td>-</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td><a href="#">Universität Heidelberg</a></td>
+                <td><a href='http://www.uni-heidelberg.de'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td><a href="#">Université Catholique de Louvain</a></td>
+                <td><a href='http://www.uclouvain.be'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>101</td>
+                <td>95</td>
+                <td>-</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td><a href="#">Université Paris 1 - Panthéon-Sorbonne</a></td>
+                <td><a href='http://www.univ-paris1.fr'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>-</td>
+                <td>50</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td><a href="#">Washington University in St Louis (Missouri)</a></td>
+                <td><a href='http://wustl.edu/'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>40</td>
+                <td>-</td>
+                <td>64</td>
+                <td>63</td>
+            </tr>
+            <tr>
+                <td><a href="#">Yale University</a></td>
+                <td><a href='http://www.yale.edu'><span class='glyphicon glyphicon-link'></span></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                <td>13</td>
+                <td>10</td>
+                <td>10</td>
+                <td>13</td>
+            </tr>
+            </tbody>
+        </table>
+        
+        <!--<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+        <script>document.getElementById('navbar-buscar').focus()</script>
+</body>
+</html>
