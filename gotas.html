@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Gotas</title>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-		<style type="text/css">
-		body {padding-top: 50px;}
-		</style>
-	</head>
-	<body>
-	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	        <div class="container">
-	            <div class="navbar-header">
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	                <a class="navbar-brand" href="#"><img style="height:30px" src="imgs/toto.jpg"></a>
-	            </div>
-	            <div class="collapse navbar-collapse navbar-ex1-collapse">
-	                <ul class="nav navbar-nav">
-	                    <li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
-	                    <li><a href="uni.html"><span class="glyphicon glyphicon-education"></span></a></li>
-	                    <li class="active"><a href="gotas.html" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
-	                </ul>
-	                <form class="navbar-form navbar-left" role="search">
-	                    <div class="form-group">
-	                        <input id="navbar-buscar" type="text" class="form-control" placeholder="Buscar...">
-	                    </div>
-	                </form>
-	            </div>
-	        </div>
-	    </nav>
+    <head>
+        <title>Gotas</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <style type="text/css">
+        .pic-circled {
+            border-radius: 50%;
+        }
+        body {
+            padding-top: 50px;
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html" id="navbarbrand"><img class="pic-circled" style="height:30px;" src="imgs/toto.jpg" /></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" title="Home"><span class="glyphicon glyphicon-user"></span></a></li>
+                        <li><a href="uni.html" title="Uni"><span class="glyphicon glyphicon-education"></span></a></li>
+                        <li class="active"><a href="gotas.html" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <canvas id='c'></canvas>
         <script type="text/javascript">
             var width=window.innerWidth, height=window.innerHeight, c=document.getElementById('c'), ctx=c.getContext('2d'); c.width=width-10; c.height=height; var paint=[]; var totalPaints=width/50; var size=20; function init(){for (var i=0;i<totalPaints;i++){addPaint();}setInterval(update,40);} function drawPaint(x,y,size,colour){ctx.beginPath();ctx.arc(x,y,size,0,Math.PI*2,true); ctx.closePath(); ctx.fillStyle=colour; ctx.fill();} function update(){for (var i=0;i<paint.length; i++){paint[i].y=paint[i].y+paint[i].v; if(paint[i].y>height+60){paint.splice(i,1);addPaint();}drawPaint(paint[i].x, paint[i].y, paint[i].s, paint[i].c);}} function addPaint(){var i=50;while(i>0){size=Math.random()*size+10;x=Math.random()*width;found = false; for (var j=0;j<paint.length;j++){if ((x+size>paint[j].x)&&(x-size<paint[j].x+paint[j].s)){found=true;break;} if ((x-size< paint[j].x)&&(x+size>paint[j].x-paint[j].s)){found = true;break;}} if (found==false){paint.push({s:size,x:x,y:-60,v:(Math.random()*2)+2,c:'#'+(Math.random()*0x313131+0xaaaaaa | 0).toString(16)});i--;return;}}} init();
         </script>
-        <script type="text/javascript">document.getElementById('navbar-buscar').focus()</script>
-		<!-- <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
-	</body>
+    </body>
 </html>
