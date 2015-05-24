@@ -12,8 +12,8 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html" title="Home"><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li class="active"><a href="uni" title="Uni"><span class="glyphicon glyphicon-education"></span></a></li>
-                    <li><a href="gotas" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
+                    <li class="active"><a href="uni.html" title="Uni"><span class="glyphicon glyphicon-education"></span></a></li>
+                    <li><a href="gotas.html" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
                 </ul>
             </div>
         </div>
