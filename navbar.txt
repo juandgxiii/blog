@@ -14,6 +14,7 @@
                         <li class="active"><a href="index.html" title="Home"><span class="glyphicon glyphicon-user"></span></a></li>
                         <li><a href="uni.html" title="Uni"><span class="glyphicon glyphicon-education"></span></a></li>
                         <li><a href="gotas.html" title="Gotas"><span class="glyphicon glyphicon-tint"></span></a></li>
+                        <li><a href="cor.html" title="Lista"><span class="glyphicon glyphicon-tasks"></span></a></li>
                     </ul>
                 </div>
             </div>
