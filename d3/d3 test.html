@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>D3</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript" src='d3/d3.v3.js'></script>
+        <style>
+            div.bar {
+                display: inline-block;
+                width: 20px;
+                height: 75px;
+                background-color: teal;
+                margin-right: 2px;
+            }
+            .sep {
+                height: 20px;
+            }
+            .axis path, .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+            .axis text {
+                font-family: sans-serif;
+                font-size: 11px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type='text/javascript'>
+            var h = 50;
+            var w = 500;
+            var svg = d3.select('body').append('svg')
+                    .attr('width', w).attr('height', h);
+            var dataset = [5, 10, 15, 20, 25];
+            var circles = svg.selectAll('circle').data(dataset)
+                .enter().append('circle');
+            circles.attr('cx', function(d,i) {return (i*50)+25})
+                .attr('cy', h/2)
+                .attr('r', function(d) {return d});
+            //
+            //barras
+            //
+            dataset = [5,10,13,19,21,25,22,18,15,13,
+                       11,12,15,20,18,17,16,18,23,25]
+            d3.select('body').append('div').attr('class', 'sep');
+            d3.select('body').selectAll('div')
+                .data(dataset)
+                .enter()
+                .append('div')
+                .attr('class', 'bar')
+                .style('height', function(d) {
+                    return (d*5) + 'px';});
+            //
+            //barras2
+            //
+            d3.select('body').append('div').attr('class', 'sep');
+            w = 500;
+            h = 100;
+            var barpadding = 1;
+            svg = d3.select('body')
+                .append('svg')
+                .attr('width', w)
+                .attr('height', h);
+            svg.selectAll('rect')
+                .data(dataset)
+                .enter()
+                .append('rect')
+                .attr('x', function(d, i) {
+                    return i * (w/dataset.length);})
+                .attr('y', function(d) {
+                    return h - d*4;})
+                .attr('width', w/dataset.length - barpadding)
+                .attr('height', function(d) {
+                    return d*4;})
+                .attr('fill', function(d) {
+                    var x = 255 - (d*11);
+                    return 'rgb('+x+','+x+','+x+')'});
+            svg.selectAll('text')
+                .data(dataset)
+                .enter()
+                .append('text')
+                .text(function(d) {
+                    return d})
+                .attr('x', function(d, i) {
+                    return i*(w/dataset.length)+(w/dataset.length-barpadding)/2})
+                .attr('y', function(d) {
+                    return h - d*4 +14})
+                .attr('font-size', '12px')
+                .attr('fill', 'white')
+                .attr('text-anchor', 'middle');
+            //
+            //scatterplot
+            //
+            d3.select('body').append('div').attr('class', 'sep');
+            dataset = [
+                        [5, 20],
+                        [480, 90],
+                        [250, 50],
+                        [100, 33],
+                        [330, 95],
+                        [410, 12],
+                        [475, 44],
+                        [25, 67],
+                        [85, 21], 
+                        [220, 88]];
+            svg = d3.select('body')
+                .append('svg')
+                .attr('width', w)
+                .attr('height', h);
+            svg.selectAll('circle')
+                .data(dataset)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                    return d[0]})
+                .attr('cy', function(d) {
+                    return d[1]})
+                .attr('r', 5);
+            svg.selectAll('text')
+                .data(dataset)
+                .enter()
+                .append('text')
+                .text(function(d) {
+                    return d[0]+','+d[1]})
+                .attr('x', function(d) {
+                    return d[0]})
+                .attr('y', function(d) {
+                    return d[1]});
+            //
+            //scaling the scatterplot
+            //
+            d3.select('body').append('div').attr('class', 'sep');
+            dataset = [
+                        [5, 20],
+                        [480, 90],
+                        [250, 50],
+                        [100, 33],
+                        [330, 95],
+                        [410, 12],
+                        [475, 44],
+                        [25, 67],
+                        [85, 21], 
+                        [220, 88],
+                        [600, 150]];
+            h = 300;
+            var padding = 30;
+            var xscale = d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d){return d[0]})])
+                .range([padding, w - padding*2]);
+            var yscale = d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d){return d[1]})])
+                .range([h - padding, padding]);
+            var rscale = d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d){return d[1]})])
+                .range([2, 5]);
+            svg = d3.select('body')
+                .append('svg')
+                .attr('width', w)
+                .attr('height', h);
+            svg.selectAll('circle')
+                .data(dataset)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                    return xscale(d[0])})
+                .attr('cy', function(d) {
+                    return yscale(d[1])})
+                .attr('r', function(d){return rscale(d[1])});
+//            svg.selectAll('text')
+//                .data(dataset)
+//                .enter()
+//                .append('text')
+//                .text(function(d) {
+//                    return d[0]+','+d[1]})
+//                .attr('x', function(d) {
+//                    return xscale(d[0])})
+//                .attr('y', function(d) {
+//                    return yscale(d[1])})
+//                .attr('font-family', 'sans-serif')
+//                .attr('font-size', '11px')
+//                .attr('fill', 'teal');
+            //axis
+            var xaxis = d3.svg.axis()
+                .scale(xscale)
+                .orient('bottom')
+                .ticks(5);
+            var yaxis = d3.svg.axis()
+                .scale(yscale)
+                .orient('left')
+                .ticks(5);
+            svg.append('g')
+                .attr('class', 'axis')
+                .attr('transform', 'translate(0,'+(h-padding)+')')
+                .call(xaxis);
+            svg.append('g')
+                .attr('class', 'axis')
+                .attr('transform', 'translate('+padding+',0)')
+                .call(yaxis);
+            //
+            //bar chart with scales
+            //
+            d3.select('body').append('div').attr('class', 'sep');
+            dataset = [5,10,13,19,21,25,22,18,15,13,
+                       11,12,15,20,18,17,16,18,23,25];
+            var w = 550;
+            var h = 250;
+            xscale = d3.scale.ordinal()
+                .domain(d3.range(dataset.length))
+                .rangeRoundBands([0, w], 0.05);
+            yscale = d3.scale.linear()
+                .domain([0, d3.max(dataset)])
+                .range([0, h]);
+            svg = d3.select('body')
+                .append('svg')
+                .attr('height', h)
+                .attr('width', w);
+            svg.selectAll('rect')
+                .data(dataset)
+                .enter()
+                .append('rect')
+                .attr('x', function(d, i) {return xscale(i)})
+                .attr('y', function(d) {return h-yscale(d)})
+                .attr('width', xscale.rangeBand())
+                .attr('height', function(d) {return yscale(d)})
+                .attr('fill', function(d) {
+                        var x = 255 - (d*11);
+                        return 'rgb('+x+','+x+','+x+')'});
+            svg.selectAll('text')
+                .data(dataset)
+                .enter()
+                .append('text')
+                .text(function(d){return d})
+                .attr('text-anchor', 'middle')
+                .attr('x', function(d,i) {return xscale(i)+xscale.rangeBand()/2})
+                .attr('y', function(d) {return h-yscale(d)+14})
+                .attr('font-family', 'sans-serif')
+                .attr('font-size', '11px')
+                .attr('fill', 'white');
+            var button1 = document.body.appendChild(document.createElement('button'));
+            var buttonremove = document.body.appendChild(document.createElement('button'));
+            button1.innerHTML = 'Click to update';
+            button1.id = 'button1';
+            buttonremove.innerHTML = 'Remove values';
+            buttonremove.id = 'buttonremove';
+            d3.select('#button1')
+                .on('click', function() {
+                    w = 550;
+                    h = 250;
+                    dataset.push(Math.round(Math.random()*20+6));
+                    yscale.domain([0, d3.max(dataset)]);
+                    xscale.domain(d3.range(dataset.length));
+                    var bars = svg.selectAll('rect')
+                        .data(dataset);
+                    bars.enter()
+                        .append('rect')
+                        .attr('x', w)
+                        .attr('y', function(d){return h-yscale(d)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d)})
+                        .attr('fill', function(d){
+                            var x = 255 - (d*11);
+                            return 'rgb('+x+','+x+','+x+')'});
+                    bars.transition()
+                        .attr('x', function(d,i){return xscale(i)})
+                        .attr('y', function(d){return h-yscale(d)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d)});
+                    svg.selectAll('text')
+                        .data(dataset)
+                        .enter()
+                        .append('text')
+                        .text(function(d){return d})
+                        .attr('text-anchor', 'middle')
+                        .attr('x', w+xscale.rangeBand()/2)
+                        .attr('y', function(d) {return h-yscale(d)+14})
+                        .attr('font-family', 'sans-serif')
+                        .attr('font-size', '11px')
+                        .attr('fill', 'white');
+                    svg.selectAll('text')
+                        .transition()
+//                        .delay(function(d,i){return i*100})
+                        .attr('y', function(d) {return h-yscale(d)+14})
+                        .attr('x', function(d,i){return xscale(i)+xscale.rangeBand()/2});
+                });
+            d3.select('#buttonremove')
+                .on('click', function() {
+                    w = 550;
+                    h = 250;
+                    dataset.pop();
+                    yscale.domain([0, d3.max(dataset)]);
+                    xscale.domain(d3.range(dataset.length));
+                    var bars = svg.selectAll('rect')
+                        .data(dataset);
+                    bars.exit()
+                        .transition()
+                        .attr('x', w)
+                        .remove();
+                    svg.selectAll('text')
+                        .data(dataset)
+                        .exit()
+                        .transition()
+                        .attr('x', w)
+                        .remove();
+                    bars.transition()
+                        .attr('x', function(d,i){return xscale(i)})
+                        .attr('y', function(d){return h-yscale(d)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d)});
+            });
+            //
+            //update axis
+            //
+            d3.select('body').append('div').attr('class', 'sep');
+            w = 500;
+            h = 300;
+            padding = 30;
+            var dataset2 = [];
+            var dur2 = 1000;
+            var numdatapoints = 100;
+            var maxrange = Math.random() * 1000;
+            for (var i = 0; i < numdatapoints; i++) {
+                dataset2.push([Math.floor(Math.random()*maxrange),
+                             Math.floor(Math.random()*maxrange)])
+            }
+            var xscale2 = d3.scale.linear()
+                .domain([0, d3.max(dataset2, function(d){return d[0]})])
+                .range([padding, w - padding*2]);
+            var yscale2 = d3.scale.linear()
+                .domain([0, d3.max(dataset2, function(d){return d[1]})])
+                .range([h - padding, padding]);
+            var xaxis2 = d3.svg.axis()
+                .scale(xscale2)
+                .orient('bottom')
+                .ticks(5);
+            var yaxis2 = d3.svg.axis()
+                .scale(yscale2)
+                .orient('left')
+                .ticks(5);
+            var svg2 = d3.select('body')
+                .append('svg')
+                .attr('width', w)
+                .attr('height', h);
+            svg2.append('clipPath')
+                .attr('id', 'chart-area')
+                .append('rect')
+                .attr('x', padding)
+                .attr('y', padding)
+                .attr('width', w - padding*3)
+                .attr('height', h - padding*2);
+            svg2.append('g')
+                .attr('id', 'circles')
+                .attr('clip-path', 'url(#chart-area)')
+                .selectAll('circle')
+                .data(dataset2)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                    return xscale2(d[0])})
+                .attr('cy', function(d) {
+                    return yscale2(d[1])})
+                .attr('r', 2);
+            svg2.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', 'translate(0,'+(h-padding)+')')
+                .call(xaxis2);
+            svg2.append('g')
+                .attr('class', 'y axis')
+                .attr('transform', 'translate('+padding+',0)')
+                .call(yaxis2);
+            var button2 = document.body.appendChild(document.createElement('button'));
+            button2.innerHTML = 'Click to update';
+            button2.id = 'button2';
+            d3.select('#button2')
+                .on('click', function() {
+                    var numvalues = dataset2.length;
+                    maxrange = Math.random() * 1000;
+                    dataset2 = [];
+                    for (var i=0; i < numvalues; i++) {
+                        dataset2.push([Math.floor(Math.random()*maxrange),
+                                      Math.floor(Math.random()*maxrange)]);
+                        }
+                    xscale2.domain([0, d3.max(dataset2, function(d){return d[0]})]);
+                    yscale2.domain([0, d3.max(dataset2, function(d){return d[1]})]);
+                    svg2.selectAll('circle')
+                        .data(dataset2)
+                        .transition()
+                        .duration(dur2)
+                        .each('start', function(){
+                            d3.select(this)
+                            .attr('r', 7)
+                            .attr('fill', 'magenta')})
+                        .attr('cx', function(d){return xscale2(d[0])})
+                        .attr('cy', function(d){return yscale2(d[1])})
+                        .each('end', function(){
+                            d3.select(this)
+                            .transition()
+                            .attr('r', 2)
+                            .attr('fill', 'black')});
+                    svg2.select('.x.axis')
+                        .transition()
+                        .duration(dur2)
+                        .call(xaxis2);
+                    svg2.select('.y.axis')
+                        .transition()
+                        .duration(dur2)
+                        .call(yaxis2);
+                    });
+            
+            //d3.select('body').append('div').attr('class', 'sep');
+        </script>
+        
+        
+        
+        
+        
+    </body>
+</html>

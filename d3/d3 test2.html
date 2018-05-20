@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>D3</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript" src='d3/d3.v3.js'></script>
+        <style>
+            .sep {
+                height: 20px;
+            }
+            svg, button {
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <script type='text/javascript'>
+            var h = 200;
+            var w = 500;
+            var color = function(d) {
+                        var x = 255 - (d.value*11);
+                        return 'rgb('+x+','+x+','+x+')'};
+            var svg = d3.select('body').append('svg')
+                    .attr('width', w).attr('height', h);
+            var dataset = [
+                {key: 0, value: 5},
+                {key: 1, value: 10},
+                {key: 2, value: 13},
+                {key: 3, value: 19},
+                {key: 4, value: 21},
+                {key: 5, value: 25},
+                {key: 6, value: 22},
+                {key: 7, value: 18},
+                {key: 8, value: 15},
+                {key: 9, value: 13},
+                {key: 10, value: 11},
+                {key: 11, value: 12},
+                {key: 12, value: 15},
+                {key: 13, value: 20},
+                {key: 14, value: 18},
+                {key: 15, value: 17},
+                {key: 16, value: 16},
+                {key: 17, value: 18},
+                {key: 18, value: 23},
+                {key: 19, value: 25} ];
+            var key = function(d) {return d.key};
+            var xscale = d3.scale.ordinal()
+                .domain(d3.range(dataset.length))
+                .rangeRoundBands([0, w], 0.05);
+            var yscale = d3.scale.linear()
+                .domain([0, d3.max(dataset, function(d){return d.value})])
+                .range([0, h]);
+            svg.selectAll('rect')
+                .data(dataset, key)
+                .enter()
+                .append('rect')
+                .attr('x', function(d, i) {return xscale(i)})
+                .attr('y', function(d) {return h-yscale(d.value)})
+                .attr('width', xscale.rangeBand())
+                .attr('height', function(d) {return yscale(d.value)})
+                .attr('fill', color);
+            svg.selectAll('text')
+                .data(dataset, key)
+                .enter()
+                .append('text')
+                .text(function(d){return d.value})
+                .attr('text-anchor', 'middle')
+                .attr('x', function(d,i) {return xscale(i)+xscale.rangeBand()/2})
+                .attr('y', function(d) {return h-yscale(d.value)+14})
+                .attr('font-family', 'sans-serif')
+                .attr('font-size', '11px')
+                .attr('fill', 'white');
+            document.body.appendChild(document.createElement('div')).setAttribute('class','sep');
+            var button1 = document.body.appendChild(document.createElement('button'));
+            var buttonremove = document.body.appendChild(document.createElement('button'));
+            button1.innerHTML = 'Click to update';
+            button1.id = 'button1';
+            buttonremove.innerHTML = 'Remove values';
+            buttonremove.id = 'buttonremove';
+            d3.select('#button1')
+                .on('click', function() {
+                    var lastkey = dataset.length ? dataset[dataset.length-1].key : 0;
+                    dataset.push({key:lastkey+1, value:Math.round(Math.random()*20+6)});
+                    yscale.domain([0, d3.max(dataset, function(d){return d.value})]);
+                    xscale.domain(d3.range(dataset.length));
+                    var bars = svg.selectAll('rect')
+                        .data(dataset, key);
+                    bars.enter()
+                        .append('rect')
+                        .attr('x', w)
+                        .attr('y', function(d){return h-yscale(d.value)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d.value)})
+                        .attr('fill', color);
+                    bars.transition()
+                        .attr('x', function(d,i){return xscale(i)})
+                        .attr('y', function(d){return h-yscale(d.value)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d.value)});
+                    svg.selectAll('text')
+                        .data(dataset, key)
+                        .enter()
+                        .append('text')
+                        .text(function(d){return d.value})
+                        .attr('text-anchor', 'middle')
+                        .attr('x', w+xscale.rangeBand()/2)
+                        .attr('y', function(d) {return h-yscale(d.value)+14})
+                        .attr('font-family', 'sans-serif')
+                        .attr('font-size', '11px')
+                        .attr('fill', 'white');
+                    svg.selectAll('text')
+                        .transition()
+                        .attr('y', function(d) {return h-yscale(d.value)+14})
+                        .attr('x', function(d,i){return xscale(i)+xscale.rangeBand()/2});
+                });
+            d3.select('#buttonremove')
+                .on('click', function() {
+                    dataset.shift();
+                    yscale.domain([0, d3.max(dataset, function(d){return d.value})]);
+                    xscale.domain(d3.range(dataset.length));
+                    var bars = svg.selectAll('rect')
+                        .data(dataset, key);
+                    bars.exit()
+                        .transition()
+                        .attr('x', function(){return -xscale.rangeBand()})
+                        .remove();
+                    bars.transition()
+                        .attr('x', function(d,i){return xscale(i)})
+                        .attr('y', function(d){return h-yscale(d.value)})
+                        .attr('width', xscale.rangeBand())
+                        .attr('height', function(d){return yscale(d.value)});
+                    var texts = svg.selectAll('text')
+                        .data(dataset, key);
+                    texts.exit()
+                        .transition()
+                        .attr('x', function(){return -xscale(1)-xscale.rangeBand()/2})
+                        .remove();
+                    texts.transition()
+                        .attr('y', function(d) {return h-yscale(d.value)+14})
+                        .attr('x', function(d,i){return xscale(i)+xscale.rangeBand()/2});
+            });
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

@@ -21,7 +21,7 @@ function draw() {
   background(100);
   ortho(-400, 400, 400, -400, 0, 1000);
   rotateX(-ma);
-  rotateY(-QUARTER_PI)﻿
+  rotateY(-QUARTER_PI)
 
   for (let z = 0; z < height; z += w) {
     for (let x = 0; x < width; x += w) {
@@ -33,10 +33,9 @@ function draw() {
       translate(x - width / 2, 0, z - height / 2);
       normalMaterial();
       box(w, h, w);
-      //rect(x - width / 2 + w / 2, 0, w - 2, h);
       pop();
     }
   }
 
-  angle -= 0.07;
+  angle -= 0.04;
 }
